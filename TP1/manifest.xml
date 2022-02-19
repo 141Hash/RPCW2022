@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <info>
+        <titulo>TP1 - Página Web Jacaré</titulo>
+        <data>21 de fevereiro 2022</data>
+        <autor>André Carvalho da Cunha Martins</autor>
+        <nrAluno>PG47009</nrAluno>
+        <uc>Representação e Processamento de Conhecimento na Web</uc>
+    </info>
+    <objetivo>
+        O objetivo deste primeiro trabalho prático era realizar uma pequena introdução ao desenvolvimento Web, recorrendo à utilização de HTML e CSS
+    </objetivo>
+    <ficheiros>
+        <html>
+            <nome>index.html</nome>
+            <nome>info.html</nome>
+            <nome>wildlife.html</nome>
+        </html>
+        <css>
+            <nome>gallery.css</nome>
+        </css>
+        <imagens>
+            <dir>Images</dir>
+        </imagens>
+    </ficheiros>
+</manifest>
