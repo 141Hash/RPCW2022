@@ -1,26 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest>
-    <info>
+<doc>
+    <meta>
         <titulo>TP1 - Página Web Jacaré</titulo>
-        <data>21 de fevereiro 2022</data>
-        <autor>André Carvalho da Cunha Martins</autor>
-        <nrAluno>PG47009</nrAluno>
-        <uc>Representação e Processamento de Conhecimento na Web</uc>
-    </info>
-    <objetivo>
-        O objetivo deste primeiro trabalho prático era realizar uma pequena introdução ao desenvolvimento Web, recorrendo à utilização de HTML e CSS
-    </objetivo>
-    <ficheiros>
-        <html>
-            <nome>index.html</nome>
-            <nome>info.html</nome>
-            <nome>wildlife.html</nome>
-        </html>
-        <css>
-            <nome>gallery.css</nome>
-        </css>
-        <imagens>
-            <dir>Images</dir>
-        </imagens>
-    </ficheiros>
-</manifest>
+        <data>22 de fevereiro 2022</data>
+        <autor>
+            <id>PG47009</id>
+            <nome>André Carvalho da Cunha Martins</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web<</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>O objetivo deste primeiro trabalho prático era realizar uma pequena introdução ao desenvolvimento Web, recorrendo à utilização de HTML e CSS</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>index.html</url>
+            <texto>Homepage</texto>
+        </resultado>
+        <resultado>
+            <url>info.html</url>
+            <texto>Infopage</texto>
+        </resultado>
+        <resultado>
+            <url>wildlife.html</url>
+            <texto>Página com o documentário</texto>
+        </resultado>
+        <resultado>
+            <url>gallery.css</url>
+            <texto>Stylesheet</texto>
+        </resultado>
+    </resultados>
+</doc>
