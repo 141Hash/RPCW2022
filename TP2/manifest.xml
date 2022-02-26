@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC2</titulo>
+        <data>01/03/2022</data>
+        <autor>
+            <id>PG47009</id>
+            <nome>André Carvalho da Cunha Martins</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Este trabalho prático uniu a primeira interação entre frontend e backend, criando um servidor em Javascript capaz de apresentar ficheiros HTML</p>
+        <p>O objetivo seria criar páginas HTML que representação a informação do</p>
+            <xref>
+                <url>https://epl.di.uminho.pt/~jcr/AULAS/ATP2021/datasets/cinemaATP.json</url>
+                <texto> dataset</texto>
+            </xref> disponibilizado pelo docente.
+        </p>
+        <p>Devido à enorme quantidade de dados, foi necessário recorrer a um script de Python para que houvesse uma transformação automática.</p>
+        <p>Existem 2 páginas que apresentam todos os filmes e atores listados.</p>
+        <p>É possível obter uma página individual de cada ator e de cada filme</p>
+        <p>A partir dessas páginas individuais, é possível aceder a outras páginas, caso haja alguma relação entre atores e filmes</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>json_to_html.py</url>
+            <texto>Script responsável por gerar as páginas HTML</texto>
+        </resultado>
+        <resultado>
+            <url>fileServer.js</url>
+            <texto>Programa que cria o nosso servidor</texto>
+        </resultado>
+        <resultado>
+            <url>cinemaATP.json</url>
+            <texto>Dataset</texto>
+        </resultado>
+        <resultado>
+            <url>HTML</url>
+            <texto>Diretoria com todas as páginas HTML geradas pelo script</texto>
+        </resultado>
+    </resultados>
+</doc>

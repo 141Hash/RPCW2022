@@ -35,7 +35,6 @@ http.createServer(function(req,res){
         })
     } else if(myurl.includes("/filmes")){
         var aux = myurl.substring(9)
-        console.log(aux)
         fs.readFile("./HTML/f" + aux + ".html", function(err,data){
             res.writeHead(200, {'Content-Type':'text/html'})
             if(err){

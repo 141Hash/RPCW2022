@@ -45,7 +45,7 @@ def homepage():
 
     homepage_html.write("</html>\n")
 
-def allMoviesPage(jsonData):
+def allMoviesPage(filmes):
     movie_html = open("./HTML/filmes.html", "w")
     movie_html.write("<!DOCTYPE html>\n")
 
@@ -67,15 +67,10 @@ def allMoviesPage(jsonData):
 
     movie_html.write("\t\t<div class=\"w3-container w3-margin-left\">\n")
     movie_html.write("\t\t\t<ol>\n")
-
-    filmeIndex = 1
-    for filme in jsonData:
-        nr = str(filmeIndex)
-        movie_html.write("\t\t\t<li><a href=\"http://localhost:7777/filmes/f" + nr + "\">" + filme['title'] + " - " + str(filme['year']) + "</a></li>")
-        filmeIndex += 1
-
-    movie_html.write("\t\t\t<\ol>\n")
-
+    for key in filmes.keys():
+        numero = str(nr_filme.get(key))
+        movie_html.write("\t\t\t<li><a href=\"http://localhost:7777/filmes/f" + numero + "\">" + str(key) + " - " + str(filmes.get(key)) + "</a></li>\n")
+    movie_html.write("\t\t\t</ol>\n")
     movie_html.write("\t</body>\n")
     movie_html.write("</html>\n")
 
@@ -97,11 +92,8 @@ def individualHTMLMovie(movie):
 
     drawNavbar(individual_movie)
 
-    individual_movie.write("\t\t<div class=\"w3-bar w3-center\">\n")
+    individual_movie.write("\t\t<div class=\"w3-container w3-display-left\">\n")
     individual_movie.write("\t\t\t<h1>" + movie['title'] + "</h1>\n")
-    individual_movie.write("\t\t</div>")
-
-    individual_movie.write("\t\t<div class=\"w3-container w3-margin-left\">\n")
     individual_movie.write("\t\t\t<h3>Ano de Lançamento: " + str(movie['year']) + "</h3>\n")
     individual_movie.write("\t\t\t<h4>Elenco:</h4>\n")
     individual_movie.write("\t\t\t<ul>\n")
@@ -117,7 +109,7 @@ def individualHTMLMovie(movie):
         individual_movie.write("\t\t\t\t<li>" + g + "</li>\n")
 
     individual_movie.write("\t\t\t</ul>\n")
-    individual_movie.write("\n\n</div>")
+    individual_movie.write("\n\n</div>\n")
 
     individual_movie.write("\t</body>\n")
 
@@ -148,9 +140,10 @@ def actorsPage(atores):
 
     for key in atores.keys():
         numero = str(nr_atores.get(key))
-        atores_page.write("\t\t\t<li><a href=\"http://localhost:7777/atores/a" + numero + "\">" + key + "</a></li>")
+        atores_page.write("\t\t\t<li><a href=\"http://localhost:7777/atores/a" + numero + "\">" + key + "</a></li>\n")
         singleActorPage(atores,key)
         
+    atores_page.write("\t\t\t</ol>\n")
     atores_page.write("\t</body>\n")
 
     atores_page.write("</html>\n")
@@ -174,14 +167,12 @@ def singleActorPage(atores, key):
 
     drawNavbar(single_ator)
 
-    single_ator.write("\t\t<div class=\"w3-bar w3-center\">\n")
+    single_ator.write("\t\t<div class=\"w3-container w3-display-left\">\n")
     single_ator.write("\t\t\t<h1>" + key + "</h1>\n")
-    single_ator.write("\t\t</div>\n")
-    single_ator.write("\t\t<div class=\"w3-container w3-margin-left\">\n")
     single_ator.write("\t\t\t<ol>\n")
 
     for movie in atores.get(key):
-        single_ator.write("\t\t\t<li><a href=\"http://localhost:7777/filmes/f" + str(nr_filme.get(movie)) + "\">" + movie + "</a></li>")
+        single_ator.write("\t\t\t<li><a href=\"http://localhost:7777/filmes/f" + str(nr_filme.get(movie)) + "\">" + movie + "</a></li>\n")
 
     single_ator.write("\t\t\t</ol>\n")
 
@@ -223,9 +214,16 @@ for ator in atores.keys():
     nr_atores[ator] = n
     n += 1
 
+filmes = {}
+
+for movie in jsonData:
+    filmes[movie['title']] = movie['year']
+
+filmes = dict(sorted(filmes.items(), key = lambda x : x[0].lower()))
+
 homepage()
 
-allMoviesPage(jsonData)
+allMoviesPage(filmes)
 
 actorsPage(atores)
 
