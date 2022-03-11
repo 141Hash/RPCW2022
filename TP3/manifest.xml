@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC3: Servidor com REST API</titulo>
+        <data>2022-03-15</data>
+        <autor>
+            <id>PG47009</id>
+            <nome>André Carvalho da Cunha Martins</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW2022</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>O objetivo deste terceiro trabalho era desenvolver um servidor que iria buscar informação a uma REST API. 
+        Conjungado com o servidor desenvolvido no último trabalho, foi possível criar páginas HTML dinâmicas.</p>
+        <p>O dataset no qual corremos a API foi fornecido pelo docente da UC e encontra-se disponível no <xref>
+                <url>https://github.com/141Hash/RPCW2022/TP3</url>
+                <texto>repositório</texto>
+            </xref> da disciplina, tal como o código do servidor.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <xref>
+                <url>db.json</url>
+                <texto>Ficheiro sobre a qual a API funciona</texto>
+            </xref>
+        </resultado>
+        <resultado>
+            <xref>
+                <url>redirectServer.js</url>
+                <texto>Código-fonte responsável pela criação do servidor e de todas as páginas HTML dinâmicas.</texto>
+            </xref>
+        </resultado>
+    </resultados>
+</doc>
