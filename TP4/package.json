@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "axios": "^0.26.1",
+    "nodemon": "^2.0.15"
+  },
+  "name": "tp4",
+  "description": "",
+  "version": "1.0.0",
+  "main": "todoList.js",
+  "scripts": {
+    "test": "node todoList.js",
+    "dev": "nodemon todoList.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
