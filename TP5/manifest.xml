@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC5: MusicList</titulo>
+        <data>29/03/2022</data>
+        <autor>
+            <id>PG47009</id>
+            <nome>André Carvalho da Cunha Martins</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Este trabalho consistia na implementação de um servidor NodeJS com a utilização de uma REST API, neste caso o
+            <xref>
+                <url>https://www.npmjs.com/package/json-server</url>
+                <texto>json-server</texto>
+            </xref>
+        </p>
+        <p>com o auxílio da framework
+            <xref>
+                <url>https://expressjs.com/</url>
+                <texto>Express</texto>
+            </xref>
+        </p>
+        <p>O objetivo deste trabalho seria apresentar páginas Web com uma listagem de de todas as músicas, página individual de cada música 
+        e apresentação de todas as músicas de uma dada província </p>
+        <p>Também foi proposto a inclusão de um form para inserir novas músicas na base de dados</p>
+        <p>Para além disso, na página principal onde são apresentadas as músicas presentes na
+            <xref>
+                <url>arq-son.json</url>
+                <texto>base de dados</texto>
+            </xref>
+            deveríamos ser capazes de aceder à página individual de cada música, à página de cada província, bem como à página do formulário que permite a inserção de novas músicas. 
+        </p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>app.js</url>
+            <texto>Serviço que responde aos pedidos do cliente e comunica com a API do json-server, bem como com os routers do Express.</texto>
+        </resultado>
+        <resultado>
+            <url>arq-son.json</url>
+            <texto>Dataset.</texto>
+        </resultado>
+        <resultado>
+            <url>https://www.npmjs.com/package/axios</url>
+            <texto>Utilizado para efetuar os pedidos à API. Para instalar correr "npm install axios".</texto>
+        </resultado>
+        <resultado>
+            <url>https://expressjs.com/</url>
+            <texto>Framework utilziada para auxiliar no desenvolvimento da aplicação</texto>
+        </resultado>
+    </resultados>
+</doc>
