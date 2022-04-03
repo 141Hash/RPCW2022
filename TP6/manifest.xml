@@ -25,14 +25,30 @@
         <p>Aliado a isso, nesta aplicação era possível realizar o upload e download de ficheiros, e foi possível explorar e conciliar
         a maneira como o tratamento de ficheiros tem que ser realizado.</p>
     </resumo>
-    <resultados>
+     <resultados>
         <resultado>
             <url>app.js</url>
-            <texto>Serviço que responde aos pedidos do cliente e comunica com a base de dados, bem como com os routers do Express.</texto>
+            <texto>Aplicação web.</texto>
         </resultado>
         <resultado>
-            <url>https://expressjs.com/</url>
-            <texto>Framework utilziada para auxiliar no desenvolvimento da aplicação</texto>
+            <url>controllers/file.js</url>
+            <texto>Controlador para a gestão da meta-informação</texto>
+        </resultado>
+        <resultado>
+            <url>models/file.js</url>
+            <texto>Modelo para a meta-informação dos ficheiros</texto>
+        </resultado>
+        <resultado>
+            <url>public/images/</url>
+            <texto>Diretoria que contém os ficheiros que vão sendo submetidos na página web.</texto>
+        </resultado>
+        <resultado>
+            <url>routes/index.js</url>
+            <texto>Rota principal</texto>
+        </resultado>
+        <resultado>
+            <url>views/index.pug</url>
+            <texto>View da página web</texto>
         </resultado>
     </resultados>
 </doc>
