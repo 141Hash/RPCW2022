@@ -10,7 +10,13 @@ var upload = multer({dest:'uploads'})
 /* GET home page. */
 router.get('/', function(req, res, next) {
   File.list()
-         .then(data => res.render('index', {files: data}))
+         .then(data =>{
+          if(data.length > 0){
+            res.render('index', {files: data, empty: false})
+          }
+          else res.render('index', {empty: true})
+
+         })
          .catch(error => res.render('error', {error: error}))
 });
 
