@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC6: gestorFicheiros</titulo>
+        <data>05/04/2022</data>
+        <autor>
+            <id>PG47009</id>
+            <nome>André Carvalho da Cunha Martins</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Neste trabalho foi nos pedido para desenvolver uma aplicação web para navegar uma estrutura de classes, respondendo aos seguintes pontos</p>
+        <p>Vais precisar de um token de autorização para realizar os pedidos à API de dados. Podes obtê-lo fazendo o pedido descrito em cima. Esta parte poderá estar dentro da tua App ou podes fazê-la externamente e colocar o token no teu código. 
+        Será mais valorizada a solução em que o pedido para a geração do token é feito no arranque da tua App;</p>
+        <p>Na página inicial, para além de um título e outra informação de contexto, deverá aparecer a lista de classes de nível 1 (código e título);</p>
+        <p>Todos os campos de informação com códigos de classes devem ser transformados em links que realizam pedidos à tua aplicação de nova página;</p>
+        <p>Na página de cada classe, deve ser mostrada a informação base da classe, uma lista dos seus descendentes caso existam e, se a classe for de nível 3 uma lista dos processos relacionados (cada um destes deve ser um link para o respetivo processo), 
+        apenas deves contemplar as relações: eCruzadoCom, eComplementarDe, eSuplementoDe e eSuplementoPara;</p>
+        <p>Em todas as páginas deverá haver um link para voltar à página inicial e outro para a página anterior (nos casos em que justifique);</p>
+    </resumo>
+     <resultados>
+        <resultado>
+            <url>app.js</url>
+            <texto>Aplicação web.</texto>
+        </resultado>
+        <resultado>
+            <url>apikey.txt/url>
+            <texto>Key para aceder à API externa</texto>
+        </resultado>
+    </resultados>
+</doc>
