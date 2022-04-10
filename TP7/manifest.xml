@@ -13,23 +13,34 @@
         </uc>
     </meta>
     <resumo>
-        <p>Neste trabalho foi nos pedido para desenvolver uma aplicação web para navegar uma estrutura de classes, respondendo aos seguintes pontos</p>
-        <p>Vais precisar de um token de autorização para realizar os pedidos à API de dados. Podes obtê-lo fazendo o pedido descrito em cima. Esta parte poderá estar dentro da tua App ou podes fazê-la externamente e colocar o token no teu código. 
-        Será mais valorizada a solução em que o pedido para a geração do token é feito no arranque da tua App;</p>
-        <p>Na página inicial, para além de um título e outra informação de contexto, deverá aparecer a lista de classes de nível 1 (código e título);</p>
-        <p>Todos os campos de informação com códigos de classes devem ser transformados em links que realizam pedidos à tua aplicação de nova página;</p>
-        <p>Na página de cada classe, deve ser mostrada a informação base da classe, uma lista dos seus descendentes caso existam e, se a classe for de nível 3 uma lista dos processos relacionados (cada um destes deve ser um link para o respetivo processo), 
-        apenas deves contemplar as relações: eCruzadoCom, eComplementarDe, eSuplementoDe e eSuplementoPara;</p>
-        <p>Em todas as páginas deverá haver um link para voltar à página inicial e outro para a página anterior (nos casos em que justifique);</p>
+        <p>Este trabalho consistia na implementação de uma aplicação NodeJS que utilizasse a API CLAV e servisse como navegador.</p>
+        <p>Tivemos o auxílio da framework Express que cria diretorias e ficheiros que apoiam no desenvolvimento e para as views foi utilizado o pug.</p>
+        <p>Toda a informação retirada da API é resultante de GET's com o auxílio de uma chave fornecida.</p>
+        <p>O objetivo era criar uma página principal, na qual estivessem listadas todas as classes de nível 1 contendo links para as descendentes.</p>
+        <p>Para além disso, na página de cada classe é mostrada informações sobre essa, assim como uma lista com os links das classes descendentes.</p>
+        <p>No caso de ser uma classe nível 3 também é uma apresentada uma lista com os seus processos relacionados.</p>
+        <p>(Porta escolhida: 4000</p>
     </resumo>
-     <resultados>
+    <resultados>
         <resultado>
             <url>app.js</url>
             <texto>Aplicação web.</texto>
         </resultado>
         <resultado>
-            <url>apikey.txt/url>
-            <texto>Key para aceder à API externa</texto>
+            <url>routes/index.js</url>
+            <texto>Rota principal</texto>
+        </resultado>
+        <resultado>
+            <url>views/index.pug</url>
+            <texto>View da página principal</texto>
+        </resultado>
+        <resultado>
+            <url>views/class.pug</url>
+            <texto>View da página de uma classe</texto>
+        </resultado>
+        <resultado>
+            <url>apikey.txt</url>
+            <texto>Chave para aceder à API</texto>
         </resultado>
     </resultados>
 </doc>
