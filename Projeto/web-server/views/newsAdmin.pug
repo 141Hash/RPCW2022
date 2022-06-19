@@ -7,14 +7,9 @@ block content
                 a(href="/admin/deleteAll")
                     button.w3-button.w3-right.w3-red.w3-margin.w3-round-large(class = "fas fa-times")
             b.w3-right Fazer download:  
-                a(href="/admin/downloadLogs")
+                a(href="/admin/downloadLogs/logs.json")
                     button.w3-button.w3-right.w3-blue.w3-margin.w3-round-large(class = "fas fa-file-download")
         
-        if (sucesso)
-            div(class="w3-panel w3-green")
-                span(class="closebtn" onclick="this.parentElement.style.display='none';") &times;
-                strong Ficheiro de logs guardado na sub-diretoria Logs, na diretoria Uploads
-
         table.w3-table-all
                 tr
                     th.w3-center Username 

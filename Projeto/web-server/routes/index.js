@@ -180,7 +180,7 @@ router.get('/tipo/:tipo', verificaAutenticacao ,function(req, res, next) {
 });
 
 
-router.get('/admin/users', function (req, res) {
+router.get('/admin/users', verificaAutenticacao ,function (req, res) {
   if(req.level != 'admin') res.redirect('/feed')
   else {
     axios.get('http://localhost:3003/users')
@@ -192,11 +192,14 @@ router.get('/admin/users', function (req, res) {
   }
 })
 
-router.get('/admin/stats', function (req, res) {
+router.get('/admin/stats', verificaAutenticacao ,function (req, res) {
   if(req.level != 'admin') res.redirect('/feed')
   else {
     axios.get('http://localhost:3001/api/noticias' + "?token=" + req.cookies.token)
          .then(data => {
+          var path = __dirname + '/../uploads/Logs/logs.json'
+          var info = JSON.stringify(data.data, null, 4)
+          fs.writeFileSync(path, info)
           if (data.data.length > 0) res.render('newsAdmin', {news: data.data, empty: false})
           else res.render('newsAdmin', {news: data.data, empty: true})
          })
@@ -204,7 +207,7 @@ router.get('/admin/stats', function (req, res) {
   }
 })
 
-router.get('/admin/recursos', function (req, res) {
+router.get('/admin/recursos', verificaAutenticacao ,function (req, res) {
   if(req.level != 'admin') res.redirect('/feed')
   else {
     axios.get('http://localhost:3001/api/recursos' + "?token=" + req.cookies.token)
@@ -216,7 +219,7 @@ router.get('/admin/recursos', function (req, res) {
   }
 })
 
-router.get('/admin/deleteAll', function (req, res) {
+router.get('/admin/deleteAll', verificaAutenticacao ,function (req, res) {
   if(req.level != 'admin') res.redirect('/feed')
   else {
     axios.get('http://localhost:3001/api/noticias/deleteAll' + "?token=" + req.cookies.token)
@@ -293,22 +296,11 @@ router.get('/download/:filename', verificaAutenticacao ,function(req,res) {
     .catch(e => res.render('error', {error: e}))
 });
 
-router.get('/admin/downloadLogs', function (req, res) {
+router.get('/admin/downloadLogs/:name', verificaAutenticacao, function (req, res) {
   if(req.level != 'admin') res.redirect('/feed')
   else {
-    axios.get('http://localhost:3001/api/noticias' + "?token=" + req.cookies.token)
-         .then(data => {
-          var info = JSON.stringify(data.data, null, 4)
-          try {
-            fs.writeFileSync(__dirname + '/../uploads/Logs/logs.json', info);
-            if (data.data.length > 0) res.render('newsAdmin', {news: data.data, empty: false, sucesso: true})
-            else res.render('newsAdmin', {news: data.data, empty: true, sucesso: true})
-             } catch (error) {
-            console.error(err);
-            }
-            
-         })
-         .catch(error => res.render('error', {error: error}))
+    var path = __dirname + '/../uploads/Logs/' + req.params.name
+    res.download(path)
   }
 })
 
